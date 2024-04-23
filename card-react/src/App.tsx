@@ -1,25 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import rectangle from './assets/img/Rectangle.svg'
+import ArticleStyled from './components/Article.styled';
+import Box from './components/Box.styled';
+import ButtonBox from './components/ButtonBox.styled';
+import { ImgStyled } from './components/Img.styled';
+import { TitleStyled } from './components/Title.styled';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Box>
+        <ImgStyled src={rectangle} alt="rectangle" />
+        <TitleStyled>Headline</TitleStyled>
+        <ArticleStyled></ArticleStyled>
+        <ButtonBox></ButtonBox>
+      </Box>
   );
 }
 
