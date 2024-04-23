@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { MyTheme } from "../styles/Theme.styled";
 type BtnStyledPropsType = {
     color?: string
     fontSize?: string
@@ -15,20 +16,20 @@ const BtnStyled = styled.button<BtnStyledPropsType>`
         scale: 0.9;
     }
     ${props => props.btnType === 'primary' && css<BtnStyledPropsType>`
-        background: ${props=> props.color || 'rgba(78, 113, 254, 1)'};
-        color: ${props=> props.color || 'rgba(255, 255, 255, 1)'};
+        background: ${props=> props.color || MyTheme.color.primary};
+        color: ${props=> props.color || MyTheme.color.textColorMain};
         &:hover {
-            background: ${props=> props.color || 'darkblue'};;
+            background: ${props=> props.color || MyTheme.color.secondary};;
         }
     `}
 
     ${props => props.btnType === 'secondary' && css<BtnStyledPropsType>`
-        background: ${props=> props.color || 'rgba(255, 255, 255, 1)'};
-        color: ${props=> props.color || 'rgba(78, 113, 254, 1)'};
-        border: 2px solid ${props=> props.color || 'rgba(78, 113, 254, 1)'};
+        background: ${props=> props.color || MyTheme.color.textColorMain};
+        color: ${props=> props.color || MyTheme.color.primary};
+        border: 2px solid ${props=> props.color || MyTheme.color.primary};
         &:hover {
-            background: ${props=> props.color || 'darkblue'};
-            color: ${props=> props.color || 'rgba(255, 255, 255, 1)'};
+            background: ${props=> props.color || MyTheme.color.secondary};
+            color: ${props=> props.color || MyTheme.color.textColorMain};
             border: none;
         }
     `}

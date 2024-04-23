@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MyTheme } from "../styles/Theme.styled";
 
 const Box = styled.div`
     display: flex;
@@ -8,7 +9,7 @@ const Box = styled.div`
     height: 350px;
     background: #ffffff;
     border-radius: 15px;
-    box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 20px 5px ${MyTheme.color.secondary};
     padding: 10px 10px;
 `;
 
