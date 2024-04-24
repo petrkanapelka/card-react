@@ -5,7 +5,10 @@ type BtnStyledPropsType = {
     fontSize?: string
     btnType: 'primary' |'secondary'
 }
-
+type BtnContent = {
+    valuePrimary: string
+    valueSecondary: string
+}
 const BtnStyled = styled.button<BtnStyledPropsType>`
     height: 30px;
     width: 86px;
@@ -39,11 +42,11 @@ const ButtonWrapperStyled = styled.div`
     width: 70%;
     justify-content: space-between;
 `
-function ButtonBox() {
+function ButtonBox(props: BtnContent) {
     return (
         <ButtonWrapperStyled>
-            <BtnStyled btnType={'primary'}>See more</BtnStyled>
-            <BtnStyled btnType={'secondary'}>Save</BtnStyled>
+            <BtnStyled btnType={'primary'}>{props.valuePrimary}</BtnStyled>
+            <BtnStyled btnType={'secondary'}>{props.valueSecondary}</BtnStyled>
         </ButtonWrapperStyled>
     )
 }
