@@ -1,6 +1,6 @@
 import './App.css';
 import rectangle from './assets/img/Rectangle.svg'
-import ArticleStyled from './components/Article.styled';
+import ArticleStyled, { articleContent } from './components/Article.styled';
 import Box from './components/Box.styled';
 import ButtonBox from './components/ButtonBox.styled';
 import { ImgStyled } from './components/Img.styled';
@@ -11,8 +11,8 @@ function App() {
       <Box>
         <ImgStyled src={rectangle} alt="rectangle" />
         <TitleStyled>Headline</TitleStyled>
-        <ArticleStyled></ArticleStyled>
-        <ButtonBox></ButtonBox>
+        <ArticleStyled content={articleContent}></ArticleStyled>
+        <ButtonBox valuePrimary='Save' valueSecondary='See more'></ButtonBox>
       </Box>
   );
 }
